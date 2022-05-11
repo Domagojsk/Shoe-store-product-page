@@ -1,0 +1,231 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+li {
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hamburger,
+.close-menu,
+.logo,
+.cart,
+.user-icon {
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 1.6rem 2.4rem 2.4rem 2rem;
+  position: relative;
+}
+header .main-nav {
+  position: fixed;
+  inset: 0 30% 0 0;
+  height: 100vh;
+  background-color: hsl(0deg, 0%, 0%);
+  transition: all 0.25s ease-in-out;
+}
+header .main-nav .mobile-menu {
+  background-color: hsl(0deg, 0%, 100%);
+  height: 100%;
+  width: 100%;
+  padding: 2.4rem;
+}
+header .main-nav .nav-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin-top: 5rem;
+}
+header .main-nav .nav-link a {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 0%);
+}
+header .main-nav .nav-link a:hover, header .main-nav .nav-link a:focus {
+  border-bottom: 2px solid hsl(26deg, 100%, 55%);
+  color: hsl(219deg, 9%, 45%);
+}
+header .hamburger {
+  padding-top: 0.5rem;
+}
+header .left-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+header .right-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+header .btn-cart {
+  position: relative;
+}
+header .btn-cart .cart-counter {
+  position: absolute;
+  top: -25%;
+  right: -25%;
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(26deg, 100%, 55%);
+  padding: 0.1rem 0.6rem;
+  border-radius: 1rem;
+  line-height: 1.1;
+}
+header .user-icon {
+  width: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+}
+header .user-icon:hover {
+  border: 2px solid hsl(26deg, 100%, 55%);
+  border-radius: 50%;
+}
+header .hidden {
+  display: none;
+}

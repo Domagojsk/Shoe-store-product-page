@@ -1,0 +1,32 @@
+@mixin flex-direction($direction) {
+  @if $direction == column {
+    flex-direction: column;
+  } @else {
+    flex-direction: row;
+  }
+}
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == large) {
+    @media (max-width: 1250px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == medium) {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == small) {
+    @media (max-width: 520px) {
+      @content;
+    }
+  }
+}

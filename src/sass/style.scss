@@ -1,0 +1,91 @@
+@use 'colors' as c;
+@use 'mixins' as m;
+@use 'general' as g;
+
+// Header
+header {
+  @include m.flex(space-between, center, row);
+  padding: 1.6rem 2.4rem 2.4rem 2rem;
+  position: relative;
+
+  .main-nav {
+    position: fixed;
+    inset: 0 30% 0 0;
+    height: 100vh;
+    background-color: c.$Black;
+    transition: all 0.25s ease-in-out;
+
+    .mobile-menu {
+      background-color: c.$White;
+      height: 100%;
+      width: 100%;
+      padding: 2.4rem;
+    }
+
+    .nav-container {
+      display: flex;
+      @include m.flex-direction(column);
+      gap: 2.4rem;
+      margin-top: 5rem;
+    }
+
+    .nav-link a {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: c.$Black;
+
+      &:hover,
+      &:focus {
+        border-bottom: 2px solid c.$Orange;
+        color: c.$DarkGrayishBlue;
+      }
+    }
+  }
+
+  .hamburger {
+    padding-top: 0.5rem;
+  }
+
+  .left-container {
+    @include m.flex(center, center, row);
+    gap: 1.5rem;
+  }
+
+  .right-container {
+    @include m.flex(center, center, row);
+    gap: 1.5rem;
+  }
+
+  .btn-cart {
+    position: relative;
+
+    .cart-counter {
+      position: absolute;
+      top: -25%;
+      right: -25%;
+      font-size: 1rem;
+      font-weight: 700;
+      color: c.$White;
+      background-color: c.$Orange;
+      padding: 0.1rem 0.6rem;
+      border-radius: 1rem;
+      line-height: 1.1;
+    }
+  }
+
+  .user-icon {
+    width: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      border: 2px solid c.$Orange;
+      border-radius: 50%;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}
