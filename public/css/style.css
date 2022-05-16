@@ -148,6 +148,10 @@ a {
   cursor: pointer;
 }
 
+.hidden {
+  display: none;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -158,10 +162,11 @@ header {
 }
 header .main-nav {
   position: fixed;
-  inset: 0 30% 0 0;
+  inset: 0 43% 0 0;
   height: 100vh;
   background-color: hsl(0deg, 0%, 0%);
   transition: all 0.25s ease-in-out;
+  z-index: 999;
 }
 header .main-nav .mobile-menu {
   background-color: hsl(0deg, 0%, 100%);
@@ -226,6 +231,256 @@ header .user-icon:hover {
   border: 2px solid hsl(26deg, 100%, 55%);
   border-radius: 50%;
 }
-header .hidden {
+header .cart-container {
+  position: absolute;
+  background-color: hsl(0deg, 0%, 100%);
+  z-index: 99;
+  right: 1rem;
+  top: 8rem;
+  border-radius: 0.5rem;
+  width: 35.5rem;
+  box-shadow: 0 2rem 1rem 1rem rgba(0, 0, 0, 0.3);
+}
+header .cart-container .cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 2rem 0 2rem;
+  margin: 3rem 0;
+}
+header .cart-container .sneakers-img {
+  height: 5rem;
+  border-radius: 0.5rem;
+}
+header .cart-container .product-name {
+  font-size: 1.5rem;
+  color: hsl(219deg, 9%, 45%);
+  line-height: 2.6rem;
+}
+header .cart-container .price-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.7rem;
+  font-size: 1.5rem;
+  color: hsl(219deg, 9%, 45%);
+  line-height: 2.6rem;
+}
+header .cart-container .total {
+  font-size: 1.6rem;
+  color: hsl(0deg, 0%, 0%);
+  font-weight: 700;
+}
+header .cart-container .delete-btn {
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+header .cart-container .delete-btn:hover {
+  background-color: hsl(25deg, 100%, 94%);
+  transform: scale(1.1);
+}
+header .cart-container .checkout-btn {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(26deg, 100%, 55%);
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-align: center;
+  cursor: pointer;
+  padding: 2rem;
+  margin: 3.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0rem 2rem 2.5rem 1rem hsl(25deg, 100%, 94%);
+  transition: all 0.3s ease-out;
+}
+header .cart-container .checkout-btn:hover {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+header .cart-container .cart-header {
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-bottom: 1px solid hsl(223deg, 64%, 98%);
+  padding: 2.5rem 2rem;
+}
+header .cart-container .empty-msg {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: hsl(219deg, 9%, 45%);
+  text-align: center;
+  padding: 9.5rem 0;
+}
+
+main .img-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+main .main-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+main .gallery-container {
   display: none;
+}
+main .arrow {
+  position: absolute;
+  background-color: hsl(0deg, 0%, 100%);
+  width: 3.8em;
+  height: 3.8rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+  top: 45%;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-out;
+}
+main .arrow:hover {
+  transform: scale(1.2);
+}
+main .next {
+  right: 5%;
+}
+main .next:hover {
+  border: 2px solid hsl(26deg, 100%, 55%);
+  transform: scale(1.2);
+}
+main .prev {
+  left: 5%;
+}
+main .prev:hover {
+  border: 2px solid hsl(26deg, 100%, 55%);
+  transform: scale(1.2);
+}
+main .active {
+  border: 2px solid hsl(26deg, 100%, 55%);
+  opacity: 0.5;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1.8rem 2.2rem 4.2rem 2.2rem;
+}
+.about-container .text-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+.about-container .text-container .company-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: hsl(26deg, 100%, 55%);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.about-container .text-container .title {
+  font-size: 2.8rem;
+  color: hsl(220deg, 13%, 13%);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 1.4rem;
+}
+.about-container .text-container .info {
+  font-size: 1.4rem;
+  color: hsl(219deg, 9%, 45%);
+  line-height: 1.4;
+  letter-spacing: 0.4px;
+  margin-top: 1.4rem;
+}
+.about-container .price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 1.9rem;
+}
+.about-container .price-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.about-container .price-wrapper .price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 0%);
+}
+.about-container .price-wrapper .discount {
+  font-size: 1.5rem;
+  color: hsl(26deg, 100%, 55%);
+  background-color: hsl(25deg, 100%, 94%);
+  padding: 0.5rem 1rem;
+  border-radius: 0.6rem;
+  margin-left: 1.4rem;
+}
+.about-container .old-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: hsl(220deg, 14%, 75%);
+  text-decoration: line-through;
+}
+.about-container .counter-container {
+  display: flex;
+  flex-direction: column;
+}
+.about-container .counter-container .counter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: hsl(223deg, 64%, 98%);
+  margin-top: 1.9rem;
+  padding: 1.2rem 2.4rem;
+}
+.about-container .counter-container .counter-wrapper .btn-minus,
+.about-container .counter-container .counter-wrapper .btn-plus {
+  cursor: pointer;
+  padding: 1.2rem;
+  transition: all 0.3s ease-out;
+}
+.about-container .counter-container .counter-wrapper .btn-minus:hover,
+.about-container .counter-container .counter-wrapper .btn-plus:hover {
+  opacity: 0.6;
+  transform: scale(1.3);
+}
+.about-container .counter-container .counter-wrapper .counter {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 0%);
+}
+.about-container .counter-container .order-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: hsl(26deg, 100%, 55%);
+  color: hsl(0deg, 0%, 100%);
+  gap: 1.5rem;
+  padding: 2rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  margin-top: 1.5rem;
+  box-shadow: 0rem 2rem 2.5rem 1rem hsl(25deg, 100%, 94%);
+  transition: all 0.3s ease-out;
+}
+.about-container .counter-container .order-btn:hover {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+.about-container .counter-container .order-btn img {
+  height: 1.6rem;
+  filter: brightness(250%);
 }
