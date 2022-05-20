@@ -478,7 +478,7 @@ main .active {
 }
 .about-container .counter-container .order-btn:hover {
   opacity: 0.6;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .about-container .counter-container .order-btn img {
   height: 1.6rem;

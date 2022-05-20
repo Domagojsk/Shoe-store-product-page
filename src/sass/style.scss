@@ -233,8 +233,6 @@ main {
     border: 2px solid c.$Orange;
     opacity: 0.5;
   }
-
-
 }
 
 // About container
@@ -349,7 +347,7 @@ main {
 
       &:hover {
         opacity: 0.6;
-        transform: scale(1.1);
+        transform: scale(1.05);
       }
 
       img {

@@ -17,8 +17,8 @@ const emptyMsg = document.querySelector('.empty-msg');
 const cartCounter = document.querySelector('.cart-counter');
 const productContainer = document.querySelector('.product-container');
 const cartContainer = document.querySelector('.cart-container');
-const price = document.querySelector('.price');
 
+const price = document.querySelector('.price');
 const counter = document.querySelector('.counter');
 const cartBtn = document.querySelector('.btn-cart');
 
@@ -27,6 +27,7 @@ const btnPlus = document.querySelector('.btn-plus');
 const orderBtn = document.querySelector('.order-btn');
 const cartCheckoutBtn = document.querySelector('.checkout-btn');
 // CART
+
 btnPlus.addEventListener('click', increase);
 btnMinus.addEventListener('click', decrease);
 
@@ -86,9 +87,10 @@ function addQtyToCart() {
 </div>`;
   productContainer.innerHTML = productHtml;
   cartCounter.innerText = qty;
-  // counter.innerText = 0;
+  counter.innerText = 0;
 
   const deleteBtn = document.querySelector('.delete-btn');
+
   deleteBtn.addEventListener('click', decreaseQtyInCart);
 
   if (
@@ -109,16 +111,15 @@ function addQtyToCart() {
 function decreaseQtyInCart() {
   const count = document.querySelector('.count');
   const total = document.querySelector('.total');
-
   cartCounter.innerHTML--;
-  // total.innerHTML = total.innerHTML - price.innerHTML;
-
-  count.innerHTML = cartCounter.innerHTML;
+  count.innerHTML--;
+  total.innerHTML = `$${125 * cartCounter.innerHTML}`;
 
   if (cartCounter.innerHTML && count.innerHTML == 0) {
     productContainer.innerHTML = '';
     cartCheckoutBtn.classList.add('hidden');
     emptyMsg.style.display = 'block';
+    cartCounter.classList.add('hidden');
   } else if (cartCounter.innerHTML && count.innerHTML > 0) {
     cartCheckoutBtn.classList.remove('hidden');
     emptyMsg.style.display = 'none';
