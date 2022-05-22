@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/responsive-mobile-first-page-using-sass-1Sptk0nHVz)
-- Live Site URL: [lLive site URL here](https://shoe-store-e-commerce.netlify.app/)
+- Live Site URL: [Live site URL here](https://shoe-store-e-commerce.netlify.app/)
 
 ### Built with
 
