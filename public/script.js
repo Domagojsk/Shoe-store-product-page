@@ -181,8 +181,6 @@ function changeImage(event) {
   imageGallery.forEach((thumb) => {
     thumb.classList.remove('active');
   });
-
   event.target.classList.add('active');
-
   mainImg.src = event.target.src.replace('-thumbnail', '');
 }

@@ -15,17 +15,12 @@
 
 @mixin respond($breakpoint) {
   @if ($breakpoint == large) {
-    @media (max-width: 1250px) {
+    @media (min-width: 1440px) {
       @content;
     }
   }
   @if ($breakpoint == medium) {
-    @media (max-width: 768px) {
-      @content;
-    }
-  }
-  @if ($breakpoint == small) {
-    @media (max-width: 520px) {
+    @media (min-width: 768px) {
       @content;
     }
   }
